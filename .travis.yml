@@ -3,5 +3,5 @@ services:
     - docker
 
 script:
-    - docker build -t Matias316/node .
-    - docker images Matias316/node
+    - docker build -t myimages/node .
+    - docker images myimages/node
