@@ -3,15 +3,15 @@ services:
     - docker
 
 script:
-    - docker build -t myimages/node .
-    - docker images myimages/node
+    - docker build -t matias3169/node .
+    - docker images matias3169/node
 
 before_deploy: 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 deploy:
     provider: script
-    script: docker push myimages/node
+    script: docker push matias3169/node
     on: 
         branch: master
         
